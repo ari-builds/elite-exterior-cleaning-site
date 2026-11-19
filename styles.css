@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Elite Exterior Cleaning — "Night & Gold"
+   B&J Elite Exterior Cleaning — "Night & Gold"
    Syne display · Inter body · IBM Plex Mono labels
    night #0A0C0E · champagne #C8A96B · light #E4CE9A · bone #EDE8DF
    ========================================================================== */
@@ -925,7 +925,7 @@ h1 em, h2 em, h3 em {
   overflow: hidden;
 }
 .band::after {
-  content: "ELITE";
+  content: "B&J";
   position: absolute;
   right: -2%;
   bottom: -28%;

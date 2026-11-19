@@ -8,8 +8,9 @@ const REPO = 'elite-exterior-cleaning-site';
 const M = JSON.parse(fs.readFileSync('C:/Users/Arian/AppData/Local/Temp/opencode/asset-manifest.json', 'utf8')).elite;
 
 const S = {
-  name: 'Elite Exterior Cleaning',
-  short: 'Elite Exterior',
+  name: 'B&J Elite Exterior Cleaning',
+  nameHtml: 'B&amp;J Elite Exterior Cleaning',
+  short: 'B&J Elite',
   tel: '(770) 744-0271',
   telHref: 'tel:+17707440271',
   area: 'Metro Atlanta & North Georgia',
@@ -166,9 +167,9 @@ const icons = () => `<svg width="0" height="0" style="position:absolute" aria-hi
 <symbol id="i-spray" viewBox="0 0 24 24"><path d="M9 8h6v13H9zM9 8V5h6v3M6 11H3M19 4l2-1M19 8h3M17 2v3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </defs></svg>`;
 
-const logo = (d) => `<a class="logo" href="${d === 0 ? '#top' : url(d, '')}" aria-label="${S.name}, home">
+const logo = (d) => `<a class="logo" href="${d === 0 ? '#top' : url(d, '')}" aria-label="${S.nameHtml}, home">
   <span class="logo__mark" aria-hidden="true">E</span>
-  <span class="logo__txt"><strong>Elite</strong><span class="mono">Exterior Cleaning</span></span>
+  <span class="logo__txt"><strong>B&amp;J Elite</strong><span class="mono">Exterior Cleaning</span></span>
 </a>`;
 
 const head = ({ d, title, desc, canonical, og, jsonld, active = '', base = '' }) => `<!DOCTYPE html>
@@ -344,7 +345,7 @@ const home = `
     </div>
     <div class="why__body rv rv-d1">
       <p class="lead">The problem is what the dirt is holding: algae eating into shingles, mildew in the siding, clay packed into concrete, and water finding a gutter that stopped flowing months ago.</p>
-      <p>Elite Exterior Cleaning is owner-operated by Justin Hall and works across ${S.area}. The approach is simple — identify the surface, choose the right pressure and chemistry, protect everything that should not get wet, and do not leave until the edges match the middle.</p>
+      <p>B&amp;J Elite Exterior Cleaning is owner-operated by Justin Hall and works across ${S.area}. The approach is simple — identify the surface, choose the right pressure and chemistry, protect everything that should not get wet, and do not leave until the edges match the middle.</p>
       <div class="why__notes">
         <div><span class="mono">01</span><strong>Right pressure</strong><p>Soft wash where it belongs, surface cleaner where it belongs, and never the same tip for both.</p></div>
         <div><span class="mono">02</span><strong>Right chemistry</strong><p>Dilution matched to the material, so the growth dies without bleaching the finish.</p></div>
@@ -367,7 +368,7 @@ const home = `
     </div>
     <div class="sel__panels">
       ${SURFACES.map((s, i) => `<div class="sel__panel${i === 0 ? ' is-on' : ''}" id="panel-${s.id}" role="tabpanel" aria-labelledby="tab-${s.id}"${i === 0 ? '' : ' hidden'}>
-        <figure class="sel__fig"><img src="assets/opt/${M[s.img].small}" alt="${esc(s.label)} cleaning by Elite Exterior Cleaning" width="${M[s.img].w}" height="${M[s.img].h}" decoding="async"></figure>
+        <figure class="sel__fig"><img src="assets/opt/${M[s.img].small}" alt="${esc(s.label)} cleaning by B&amp;J Elite Exterior Cleaning" width="${M[s.img].w}" height="${M[s.img].h}" decoding="async"></figure>
         <div class="sel__copy">
           <h3>${s.h}</h3>
           <p>${s.p}</p>
@@ -476,7 +477,7 @@ ${ctaBand(0)}
 
 page({
   d: 0,
-  title: `Elite Exterior Cleaning | Pressure Washing in Metro Atlanta`,
+  title: `B&J Elite Exterior Cleaning | Pressure Washing in Metro Atlanta`,
   desc: 'Soft washing, pressure washing, roof cleaning, driveways, decks and gutters across Metro Atlanta and North Georgia. Free written estimates.',
   canonical: '',
   og: 'hero.webp',
@@ -599,7 +600,7 @@ const workBody = `
     </div>
     <div class="gal gal--work" data-gallery>
       ${WORK.map(([img, label, town, cat], i) => `<button class="gal__item gal__item--btn rv" data-cat="${cat}" data-lightbox="${i}" data-full="assets/opt/${M[img].file}" data-label="${esc(label)} · ${esc(town)}" aria-label="Open ${esc(label)} in ${esc(town)}">
-        <img src="assets/opt/${M[img].small}" alt="${esc(label)} in ${esc(town)} by Elite Exterior Cleaning" width="${M[img].w}" height="${M[img].h}" loading="lazy" decoding="async">
+        <img src="assets/opt/${M[img].small}" alt="${esc(label)} in ${esc(town)} by B&amp;J Elite Exterior Cleaning" width="${M[img].w}" height="${M[img].h}" loading="lazy" decoding="async">
         <span class="gal__cap"><span class="mono">${String(i + 1).padStart(2, '0')}</span>${label} · ${town}</span>
       </button>`).join('\n      ')}
     </div>
@@ -621,7 +622,7 @@ ${ctaBand(1)}
 page({
   d: 1,
   title: `Recent Exterior Cleaning Projects in Atlanta | ${S.name}`,
-  desc: 'House washing, roof treatment, driveway cleaning, deck and fence projects across Metro Atlanta and North Georgia by Elite Exterior Cleaning.',
+  desc: 'House washing, roof treatment, driveway cleaning, deck and fence projects across Metro Atlanta and North Georgia by B&amp;J Elite Exterior Cleaning.',
   canonical: 'work/',
   og: 'work-06.webp',
   active: 'work',
@@ -684,7 +685,7 @@ ${ctaBand(1)}
 page({
   d: 1,
   title: `Our Exterior Cleaning Process | ${S.name}`,
-  desc: 'How Elite Exterior Cleaning works: walkaround and test patch, written quote, protection, the right method for each surface, and a final walkaround.',
+  desc: 'How B&J Elite Exterior Cleaning works: walkaround and test patch, written quote, protection, the right method for each surface, and a final walkaround.',
   canonical: 'process/',
   og: 'work-08.webp',
   active: 'process',
@@ -701,9 +702,9 @@ const aboutBody = `
     <div>
       <span class="label">About</span>
       <h1>Owner-operated.<br><em>A higher standard.</em></h1>
-      <p>Elite Exterior Cleaning is Justin Hall's company, working across ${S.area}.</p>
+      <p>B&amp;J Elite Exterior Cleaning is Justin Hall's company, working across ${S.area}.</p>
     </div>
-    <figure class="plate plate--portrait"><img src="assets/opt/about.webp" alt="Elite Exterior Cleaning at work" width="${M.about.w}" height="${M.about.h}" decoding="async"></figure>
+    <figure class="plate plate--portrait"><img src="assets/opt/about.webp" alt="B&amp;J Elite Exterior Cleaning at work" width="${M.about.w}" height="${M.about.h}" decoding="async"></figure>
   </div>
 </section>
 
@@ -713,7 +714,7 @@ const aboutBody = `
       <span class="label">The standard</span>
       <h2>“A higher standard”<br><em>is not a slogan.</em></h2>
       <p class="lead">It is a list of things that do not get skipped: the test patch, the plants, the edges, the walkaround. Most of it is invisible when the job is done — which is exactly the point.</p>
-      <p>Justin started Elite to do exterior cleaning properly: soft washing where pressure would cause damage, surface cleaning where it produces an even finish, and a written scope so the price does not move halfway through the day.</p>
+      <p>Justin started B&amp;J Elite to do exterior cleaning properly: soft washing where pressure would cause damage, surface cleaning where it produces an even finish, and a written scope so the price does not move halfway through the day.</p>
       <p>The company works with homeowners, realtors, property managers and small commercial sites. Residential and commercial, one property or a recurring schedule. You deal with the owner, and the owner is on site.</p>
     </div>
     <figure class="about__fig plate"><img src="assets/opt/work-09.webp" alt="Roof cleaning project" width="${M['work-09'].w}" height="${M['work-09'].h}" loading="lazy" decoding="async"><figcaption class="mono">Low-pressure roof treatment</figcaption></figure>
@@ -750,8 +751,8 @@ ${ctaBand(1)}
 
 page({
   d: 1,
-  title: `About Elite Exterior Cleaning | Metro Atlanta`,
-  desc: 'Meet Elite Exterior Cleaning — owner-operated by Justin Hall, serving Metro Atlanta and North Georgia with soft washing, pressure washing and roof cleaning.',
+  title: `About B&J Elite Exterior Cleaning | Metro Atlanta`,
+  desc: 'Meet B&J Elite Exterior Cleaning — owner-operated by Justin Hall, serving Metro Atlanta and North Georgia with soft washing, pressure washing and roof cleaning.',
   canonical: 'about/',
   og: 'about.webp',
   active: 'about',
@@ -833,7 +834,7 @@ ${ctaBand(1)}
 
 page({
   d: 1,
-  title: `Contact Elite Exterior Cleaning | Metro Atlanta`,
+  title: `Contact B&J Elite Exterior Cleaning | Metro Atlanta`,
   desc: 'Request a free exterior cleaning estimate in Metro Atlanta and North Georgia. Call (770) 744-0271 or send the form for a written quote.',
   canonical: 'contact/',
   og: 'hero.webp',
@@ -862,7 +863,7 @@ const thanksBody = `
 page({
   d: 1,
   title: `Request received | ${S.name}`,
-  desc: 'Your exterior cleaning estimate request has been received. Elite Exterior Cleaning will reply the same or next business day.',
+  desc: 'Your exterior cleaning estimate request has been received. B&J Elite Exterior Cleaning will reply the same or next business day.',
   canonical: 'thank-you/',
   og: 'hero.webp',
   active: '',
